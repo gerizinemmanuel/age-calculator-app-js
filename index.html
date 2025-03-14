@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <main>
+        <!-- Formulario -->
+            <div class="box-data">
+                <!-- Caixa dia -->
+                <div class="box-input">
+                    <p class="title">DAY</p>
+                    <input type="number" placeholder="DD">
+                    <!-- Mensagens de validação -->
+                    <p class="validation-msg empty">This field is required</p>
+                    <p class="validation-msg invalid"></p>
+                </div>
+                <!-- Caixa mês -->
+                <div class="box-input">
+                    <p class="title">MONTH</p>
+                    <input type="number" placeholder="MM">
+                    <!-- Mensagens de validação -->                   
+                    <p class="validation-msg empty">This field is required</p>
+                    <p class="validation-msg invalid"></p>
+                </div>
+                <!-- Caixa ano -->
+                <div class="box-input">
+                    <p class="title">YEAR</p>
+                    <input type="number" placeholder="YYYY">
+                    <!-- Mensagens de validação -->
+                    <p class="validation-msg empty">This field is required</p>
+                    <!-- fill-actual-year é preenchido em calculateTime.js -->
+                    <p class="validation-msg invalid">Must be between 1900 and <span id="fill-actual-year"></span></p>
+                </div>
+                <button class="btn-img" id="calculate"><img src="img/icon-arrow.svg" alt=""></button>
+                
+            </div>
+        <!-- </div> -->
+
+        <!-- Caixa Resultado -->
+        <div class="result">
+            <p><span class="result-field">--</span> years</p>
+            <p><span class="result-field">--</span> months</p>
+            <p><span class="result-field">--</span> days</p>
+        </div>
+    </main>
+
+
+    <script src="js/calculateTime.js"></script>
+    <script src="js/validation.js"></script>
+    
+</body>
+</html>
