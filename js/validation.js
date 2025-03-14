@@ -1,5 +1,5 @@
 //const inputs declarado em calculateTime.js
-
+import { inputs, actualYear, getDaysInMonth, calculateTime} from "./calculateTime.js";
 
 const msgEmptyField = document.querySelectorAll(".empty");
 const msgInvalidData = document.querySelectorAll(".invalid");

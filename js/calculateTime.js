@@ -1,18 +1,18 @@
-
-const actualYear = new Date().getFullYear();
-const actualMonth = new Date().getMonth();
-const actualDay = new Date().getDate();
+const actualFullDate = new Date(2025,1,14);
+export const actualYear = actualFullDate.getFullYear();
+const actualMonth = actualFullDate.getMonth();
+const actualDay = actualFullDate.getDate();
 
 const fillActualYear = document.getElementById("fill-actual-year");
 fillActualYear.innerHTML+=actualYear;
 
 
-const inputs = document.querySelectorAll(".box-data input");
+export const inputs = document.querySelectorAll(".box-data input");
 const resultFields = document.querySelectorAll(".result-field")
 
 
 //retornar o número de dias que um mês tem
-function getDaysInMonth(month, year){
+export function getDaysInMonth(month, year){
     const daysInMonth = [31, ((isLeap(year)) ? 29:28), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     return daysInMonth[month];
 }
@@ -23,7 +23,7 @@ function isLeap(year){
 }
 
 
-function calculateTime(){
+export function calculateTime(){
     const inputDay = parseInt(inputs[0].value);
     const inputMonth = parseInt(inputs[1].value)-1;
     const inputYear = parseInt(inputs[2].value);
