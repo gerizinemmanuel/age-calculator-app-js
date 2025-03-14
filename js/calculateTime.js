@@ -3,12 +3,12 @@ export const actualYear = actualFullDate.getFullYear();
 const actualMonth = actualFullDate.getMonth();
 const actualDay = actualFullDate.getDate();
 
-const fillActualYear = document.getElementById("fill-actual-year");
-fillActualYear.innerHTML+=actualYear;
-
 
 export const inputs = document.querySelectorAll(".box-data input");
-const resultFields = document.querySelectorAll(".result-field")
+
+const yearsField = document.getElementById("yearsResult");
+const monthsField = document.getElementById("monthsResult");
+const daysField = document.getElementById("daysResult");
 
 
 //retornar o número de dias que um mês tem
@@ -41,9 +41,11 @@ export function calculateTime(){
         nMonths += 12;
         nYears--;
     }
-    resultFields[0].innerHTML = nYears;
-    resultFields[1].innerHTML = nMonths;
-    resultFields[2].innerHTML = nDays;
+
+    //RECORDAR: resultFields[0] -> número de anos; resultFields[1] -> número de meses; resultFields[2] -> número de dias
+    yearsField.innerHTML = nYears;
+    monthsField.innerHTML = nMonths;
+    daysField.innerHTML = nDays;
 }
 
 

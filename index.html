@@ -33,8 +33,8 @@
                     <input type="number" placeholder="YYYY">
                     <!-- Mensagens de validação -->
                     <p class="validation-msg empty">This field is required</p>
-                    <!-- fill-actual-year é preenchido em calculateTime.js -->
-                    <p class="validation-msg invalid">Must be between 1900 and <span id="fill-actual-year"></span></p>
+                    <p class="validation-msg invalid"></p>
+
                 </div>
                 <button class="btn-img" id="calculate"><img src="img/icon-arrow.svg" alt=""></button>
                 
@@ -43,9 +43,9 @@
 
         <!-- Caixa Resultado -->
         <div class="result">
-            <p><span class="result-field">--</span> years</p>
-            <p><span class="result-field">--</span> months</p>
-            <p><span class="result-field">--</span> days</p>
+            <p><span id="yearsResult">--</span> years</p>
+            <p><span id="monthsResult">--</span> months</p>
+            <p><span id="daysResult">--</span> days</p>
         </div>
     </main>
 
