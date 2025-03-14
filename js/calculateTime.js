@@ -1,4 +1,4 @@
-const actualFullDate = new Date(2025,1,14);
+const actualFullDate = new Date();
 export const actualYear = actualFullDate.getFullYear();
 const actualMonth = actualFullDate.getMonth();
 const actualDay = actualFullDate.getDate();
